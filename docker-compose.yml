@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  build-nginx-iabee:
+    build: images/nginx-iabee
+    image: mssapp_nginx_iabee:1.13.3
+  build-nginx-laravel:
+    build: images/nginx-laravel
+    image: mssapp_nginx_laravel:1.13.3
+  build-nginx-react:
+    build: images/nginx-react
+    image: mssapp_nginx_react:1.13.3
+  build-php:
+    build: images/php
+    image: mssapp_php:7.1.8
+  build-php-fpm:
+    build: images/php-fpm
+    image: mssapp_php_fpm:7.1.8
+  build-php-fpm-sg:
+    build: images/php-fpm-sg
+    image: mssapp_php_fpm_sg:7.1.8
