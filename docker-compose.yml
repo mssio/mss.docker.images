@@ -18,3 +18,6 @@ services:
   build-php-fpm-sg:
     build: images/php-fpm-sg
     image: mssapp_php_fpm_sg:7.1.8
+  build-node-simple:
+    build: images/node-simple
+    image: mssapp_node_simple:6.11.2
