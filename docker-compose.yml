@@ -10,8 +10,8 @@ services:
     build: images/nginx-react
     image: mssapp_nginx_react:1.13.3
   build-php:
-    build: images/php
-    image: mssapp_php:7.1.8
+    build: images/laravel-worker
+    image: mssapp_laravel_worker:7.1.8
   build-php-fpm:
     build: images/php-fpm
     image: mssapp_php_fpm:7.1.8
