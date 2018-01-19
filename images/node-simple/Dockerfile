@@ -1,4 +1,4 @@
-FROM node:6.11.2-alpine
+FROM node:6.12.3-alpine
 MAINTAINER Mario Suharja <mario@mss.io>
 
 VOLUME /app

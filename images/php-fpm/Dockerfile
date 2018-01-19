@@ -1,15 +1,15 @@
-FROM php:7.1.8-fpm-alpine
+FROM php:7.2.1-fpm-alpine
 MAINTAINER Mario Suharja <mario@mss.io>
 
 # Install dependencies
 # Mcrypt, gd, xml, zip Dependencies
-RUN apk --update add --no-cache libmcrypt-dev libjpeg-turbo-dev libpng-dev libxml2-dev zlib-dev
+RUN apk --update add --no-cache libjpeg-turbo-dev libpng-dev libxml2-dev zlib-dev
 # PHP extension
-RUN docker-php-ext-install pdo_mysql bcmath json mcrypt gd xml zip
+RUN docker-php-ext-install pdo_mysql bcmath json gd xml zip
 
 # Setup xdebug
 RUN apk --update add --no-cache --virtual build-xdebug autoconf gcc g++ make \
-  && pecl install xdebug-2.5.1 \
+  && pecl install xdebug-2.6.0beta1 \
   && apk del build-xdebug
 # Enable xdebug
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
