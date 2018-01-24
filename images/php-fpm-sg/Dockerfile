@@ -3,9 +3,11 @@ MAINTAINER Mario Suharja <mario@mss.io>
 
 # Install dependencies
 # Mcrypt, gd, xml, zip Dependencies
-RUN apk --update add --no-cache libmcrypt-dev libjpeg-turbo-dev libpng-dev libxml2-dev zlib-dev
+RUN apk --update add --no-cache libmcrypt-dev freetype-dev libjpeg-turbo-dev libpng-dev libxml2-dev zlib-dev
 # PHP extension
-RUN docker-php-ext-install pdo_mysql bcmath json mcrypt gd xml zip
+RUN docker-php-ext-install pdo_mysql bcmath json mcrypt xml zip
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
+RUN docker-php-ext-install gd
 
 # Setup SourceGuardian
 COPY ixed.7.1.lin /usr/local/lib/php/extensions/no-debug-non-zts-20160303/ixed.7.1.lin
