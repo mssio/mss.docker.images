@@ -1,4 +1,4 @@
-FROM nginx:1.13.8-alpine
+FROM nginx:1.13.12-alpine
 MAINTAINER Mario Suharja <mario@mss.io>
 
 # Fix configuration

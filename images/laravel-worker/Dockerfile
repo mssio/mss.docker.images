@@ -1,4 +1,4 @@
-FROM php:7.2.1-alpine
+FROM php:7.2.5-alpine
 MAINTAINER Mario Suharja <mario@mss.io>
 
 # Install dependencies
