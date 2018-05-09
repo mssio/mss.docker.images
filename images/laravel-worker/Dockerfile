@@ -9,6 +9,10 @@ RUN docker-php-ext-install pdo_mysql bcmath json xml zip
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/
 RUN docker-php-ext-install gd
 
+# Add Wait For Port shell script
+COPY wait-for-it.sh /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh
+
 # Set volume
 VOLUME /usr/share/nginx/html
 
