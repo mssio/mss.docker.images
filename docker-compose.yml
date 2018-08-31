@@ -9,6 +9,9 @@ services:
   build-nginx-react:
     build: images/nginx-react
     image: mssapp_nginx_react:1.15.2
+  build-nginx-php:
+    build: images/nginx-php
+    image: mssapp_nginx_php:1.15.2
   build-php:
     build: images/laravel-worker
     image: mssapp_laravel_worker:7.2.8
