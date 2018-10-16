@@ -1,4 +1,4 @@
-FROM php:7.2.8-fpm-alpine
+FROM php:7.2.11-fpm-alpine
 MAINTAINER Mario Suharja <mario@mss.io>
 
 # Install dependencies
